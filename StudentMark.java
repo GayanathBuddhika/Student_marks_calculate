@@ -3,13 +3,28 @@ class StudentMark{
   public static void main(String arg[]){
      int mark[]=new int[10];
      input_mark(mark);
+     
+     System.out.println("");
+     System.out.println("  Total , Avarage , max and Minimum value of the Sudent Mark");
+     System.out.println("...............................................................");
+     System.out.println("");
+     
      total(mark);
      avarage(mark);
+     find_max(mark);
+     find_min(mark);
+     
+     System.out.println("");
+     System.out.println("           Find the Student Index of a Sudent Mark");
+     System.out.println("................................................................");
+     
+     find_index(mark);
   }
   
   public static void input_mark(int mark[]){
 	  Scanner input=new Scanner(System.in);
 	  System.out.println("Input student Marks");
+	  System.out.println("");
 	  for(int i=0;i<mark.length;i++){
 			 System.out.print("Student "+(i+1)+"\t: ");
 			 mark[i]=input.nextInt();
@@ -26,7 +41,7 @@ class StudentMark{
 		  sum+=mark[i];
 		  
 		  }
-	  System.out.println("Totalt fo the Sudents Mark\t:"+sum);
+	  System.out.println("Totalt fo the Sudents Marks\t\t:"+sum);
 	  }
 
  
@@ -39,7 +54,49 @@ class StudentMark{
 		  }
 		
 	  avg=sum/mark.length;
-	  System.out.println("Avarage fo the Sudents Mark\t:"+avg);
+	  System.out.println("Avarage fo the Sudents Marks\t\t:"+avg);
+	  }
+	  
+	  
+	  public static void find_max(int mark[]){
+	  int max=0;
+	  for(int i=0;i<mark.length;i++){
+		  if(mark[i]>max){
+			  max=mark[i];
+			  }
+		  
+		  }
+	  System.out.println("Max Mark fo the Sudents Marks\t\t:"+max);
 	  }
 
+ 
+      public static void find_min(int mark[]){
+	  int min=mark[0];
+	  for(int i=0;i<mark.length;i++){
+		  if(mark[i]<min){
+			  min=mark[i];
+			  }
+		  
+		  }
+	  System.out.println("Minimum Mark fo the Sudents Marks\t:"+min);
+	  }
+
+     public static void find_index(int mark[]){
+		 int index=-1;
+		 Scanner input= new Scanner(System.in);
+		 System.out.print("Plece enter Mark\t:");
+		 int st_mark=input.nextInt();
+		 System.out.println("");
+		 for(int i=0;i<mark.length;i++){
+			 
+			 if(mark[i]==st_mark){
+				 
+				 index=i+1;
+				 System.out.println("Student Index\t:"+index);
+				 }
+			 }
+			 System.out.println("All of thise student are get "+st_mark+" mark");
+			 System.out.println("");
+		 
+		 }
 }
