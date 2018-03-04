@@ -9,7 +9,22 @@ class StudentMark{
 		 mark[i]=input.nextInt();
 
 		 }
+    total(mark);
   }
+  
+ 
+  
+  public static void total(int mark[]){
+	  int sum=0;
+	  for(int i=0;i<mark.length;i++){
+		  sum+=mark[i];
+		  
+		  }
+	  System.out.println("Totalt fo the Sudents Mark :"+sum);
+	  
+	  System.out.println("Totalt fo the Sudents Mark :"+sum);
+	  System.out.println("Totalt fo the Sudents Mark :"+sum);
+	  }
 
 
 }
