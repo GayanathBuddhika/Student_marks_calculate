@@ -1,17 +1,22 @@
 import java.util.*;
 class StudentMark{
   public static void main(String arg[]){
-    Scanner input=new Scanner(System.in);
      int mark[]=new int[10];
-     System.out.println("Input student Marks");
-     for(int i=0;i<mark.length;i++){
-		 System.out.print("Student "+(i+1)+" : ");
-		 mark[i]=input.nextInt();
-
-		 }
-    total(mark);
+     input_mark(mark);
+     total(mark);
   }
   
+  public static void input_mark(int mark[]){
+	  Scanner input=new Scanner(System.in);
+	  System.out.println("Input student Marks");
+	  for(int i=0;i<mark.length;i++){
+			 System.out.print("Student "+(i+1)+" : ");
+			 mark[i]=input.nextInt();
+
+	  }
+	  
+	  
+  }
  
   
   public static void total(int mark[]){
@@ -20,9 +25,6 @@ class StudentMark{
 		  sum+=mark[i];
 		  
 		  }
-	  System.out.println("Totalt fo the Sudents Mark :"+sum);
-	  
-	  System.out.println("Totalt fo the Sudents Mark :"+sum);
 	  System.out.println("Totalt fo the Sudents Mark :"+sum);
 	  }
 
