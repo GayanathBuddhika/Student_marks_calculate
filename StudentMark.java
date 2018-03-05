@@ -47,7 +47,7 @@ class StudentMark{
  
   public static void avarage(int mark[]){
 	  int sum=0;
-	  int avg=0;
+	  double avg=0;
 	  for(int i=0;i<mark.length;i++){
 		  sum+=mark[i];
 		  
